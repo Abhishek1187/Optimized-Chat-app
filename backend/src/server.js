@@ -13,7 +13,7 @@ const __dirname = path.resolve();
 
 
 const PORT = ENV.PORT || 3001;
-app.use(express.json()); // req.body
+app.use(express.json()); // req.body  yhi  allow nhi krne deta limit over 50kb
 app.use(cookieParser());
 
 

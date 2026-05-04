@@ -3,7 +3,10 @@ import { generateToken } from "../lib/utils.js";
 import User from "../models/User.js";
 import bcrypt from "bcryptjs"
 import { ENV } from "../lib/env.js"
+implement-rate-limiting
+
 import cloudinary from "../lib/cloudinary.js"
+ main
 
 export const signup = async (req, res) => {
 
@@ -114,6 +117,15 @@ export const logout = (_, res) => {
 };
 
 export const updateProfile = async (req, res) => {
+ implement-rate-limiting
+    const { fullName, email, password } = req.body;
+    try {
+
+    } catch (error) {
+
+    }
+}
+
     try {
         const { profilePic } = req.body;
         if (!profilePic) {
@@ -136,3 +148,4 @@ export const updateProfile = async (req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 };
+ main
